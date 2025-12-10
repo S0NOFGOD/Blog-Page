@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+h2 {
+  color: #0077cc;
+}
