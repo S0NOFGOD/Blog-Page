@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>My Blog</h1>
-  </header>
 
-  <article>
-    <h2>My First Post</h2>
-    <p>This is the content of my first blog post.</p>
-  </article>
+    <!-- TOP NAVBAR -->
+    <header class="navbar">
+        <div class="logo">OBES BLOG</div>
+        <input type="text" placeholder="Search..." class="search-bar">
+        <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+    </header>
 
-  <article>
-    <h2>Travel Tips</h2>
-    <p>Here are some travel tips for beginners.</p>
-  </article>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="#">Latest Posts</a></li>
+            <li><a href="#">Popular Posts</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Lifestyle</a></li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- BLOG POST BOX -->
+        <article class="post-box">
+    <h2>Welcome to OBES BLOG</h2><br>
+    <p>
+        Here, every story, idea, and experience is a step toward discovering who we are 
+        and who we are becoming. OBES Blog is a place for dreamers, explorers, thinkers, 
+        and anyone walking their own unique path. Whether you're searching for inspiration, learning something new, or simply exploring 
+        the beauty of life’s journey — you’re right where you’re meant to be.
+    </p>
+
+    <h3 style="margin-top: 20px; text-align:center; font-weight:600;">
+        Your destiny starts here. <button>I am ready</button>
+    </h3>
+</article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 My Blog. All rights reserved.</p>
+    </footer>
+
+<script>
+function toggleShare(event) {
+    const popup = event.target.nextElementSibling;
+    popup.classList.toggle('show');
+}
+
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+}
+</script>
+
 </body>
 </html>

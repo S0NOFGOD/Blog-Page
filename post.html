@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">My Blog</div>
+    <input type="text" placeholder="Search..." class="search-bar">
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+</header>
+
+<aside class="sidebar" id="sidebar">
+    <h3>Categories</h3>
+    <ul>
+        <li><a href="#">Latest Posts</a></li>
+        <li><a href="#">Popular Posts</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Food</a></li>
+    </ul>
+</aside>
+
+<main class="content">
+    <article class="post-box full-post">
+        <h1>5 Best Places to Visit in Italy</h1>
+        <img src="https://via.placeholder.com/800x400">
+
+        <p>
+            Full article content goes here...
+        </p>
+
+        <!-- Comments Section -->
+        <section class="comments">
+            <h3>Comments</h3>
+            <textarea placeholder="Write a comment..."></textarea>
+            <button>Post Comment</button>
+        </section>
+
+        <!-- Author Info -->
+        <section class="author-box">
+            <img src="https://via.placeholder.com/80" alt="Author">
+            <div>
+                <h4>John Doe</h4>
+                <p>Travel writer and photographer.</p>
+            </div>
+        </section>
+
+    </article>
+</main>
+
+<footer>
+    <p>© 2025 My Blog. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
