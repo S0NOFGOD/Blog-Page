@@ -1,191 +1,115 @@
-/* RESET */
-* {
+body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    height: 100vh;
 }
 
-/* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #222;
-    color: #fff;
-    padding: 15px;
+/* --- NAVBAR --- */
+header {
     display: flex;
     align-items: center;
-    z-index: 1000;
+    justify-content: space-between;
+    background: black;
+    color: blue;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 65px;
 }
-.logo { font-size: 20px; font-weight: bold; }
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: blue;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: white;
+}
 
 .search-bar {
-    margin-left: 20px;
-    padding: 8px;
-    flex: 1;
-    border-radius: 5px;
-    border: none;
-}
-
-.menu-btn {
-    display: none;
-    font-size: 26px;
-    margin-left: 15px;
-    cursor: pointer;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 220px;
-    background: #f4f4f4;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    height: 100%;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.sidebar h3 { margin-bottom: 10px; }
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    margin: 10px 0;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* MAIN CONTENT */
-.content {
-    margin-left: 260px;
-    margin-top: 90px;
-    padding: 20px;
-}
-
-/* POST BOX */
-.post-box {
-    background: #fff;
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    position: relative;
-}
-
-.post-box img {
-    width: 100%;
-    border-radius: 6px;
-    margin: 15px 0;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    background: #222;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.share-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    background: #444;
-    color: #fff;
     padding: 8px 12px;
     border-radius: 5px;
-}
-
-.share-popup {
-    display: none;
-    position: absolute;
-    bottom: 60px;
-    right: 20px;
-    background: white;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    border-radius: 6px;
-}
-
-.share-popup.show {
-    display: block;
-}
-
-.share-popup a {
-    display: block;
-    margin: 5px 0;
-    color: #333;
-    text-decoration: none;
-}
-
-/* COMMENTS */
-.comments {
-    margin-top: 30px;
-}
-
-.comments textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-}
-
-.comments button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #222;
-    color: white;
     border: none;
-    border-radius: 5px;
+    width: 220px;
 }
 
-/* AUTHOR BOX */
-.author-box {
+/* --- SIDEBAR --- */
+aside {
     display: flex;
-    margin-top: 40px;
-    background: #eee;
-    padding: 15px;
-    border-radius: 8px;
+    flex-direction: column;
+    gap: 20px;
+    width: 150px;
+    background: var(--white);
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.1);
 }
 
-.author-box img {
-    border-radius: 50%;
-    margin-right: 15px;
+ul  {
+    list-style: none;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
 }
 
-/* FOOTER */
+ul a {
+    color: blue;
+}
+
+/* --- MAIN CONTENT --- */
+.content {
+    margin-left: 170px;
+    padding: 10px 10px 0 5px;
+    line-height: 3;
+    max-width: 900px;
+}
+
+.content a{
+    color: blue;
+}
+
+/* --- FOOTER --- */
 footer {
-    text-align: center;
     padding: 20px;
-    background: #222;
-    color: white;
-    margin-top: 50px;
+    text-align: center;
+    margin-top: auto;
 }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 820px) {
-
-    .menu-btn {
-        display: block;
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
+    aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        box-shadow: none;
     }
 
-    .sidebar {
-        left: -250px;
-        transition: 0.3s;
-    }
-
-    .sidebar.open {
-        left: 0;
+    aside ul {
+        display: flex;
+        gap: 20px;
     }
 
     .content {
@@ -193,8 +117,71 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .search-bar {
-        display: none;
+        width: 100%;
+    }
+
+    aside ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* --- CONTAINER FOR BOXES --- */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* space between boxes */
+    margin-left: 170px; 
+    margin-top: 20px;
+    max-width: calc(100% - 170px);
+    padding: 20px;
+}
+
+/* --- BOX STYLING --- */
+.box {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative; /* Needed for button positioning */
+}
+
+/* Button container */
+.box-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.box-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: blue;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Hover effect */
+.box-buttons button:hover {
+    background: black;
+}
+/* --- RESPONSIVE: STACK BOXES ON SMALL SCREENS --- */
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        max-width: 100%;
     }
 }

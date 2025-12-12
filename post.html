@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OBES BLOG</title>
+
+    <!-- Link external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="navbar">
-    <div class="logo">My Blog</div>
-    <input type="text" placeholder="Search..." class="search-bar">
-    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
-</header>
+    <header>
+        <div class="logo">OBES BLOG</div>
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<aside class="sidebar" id="sidebar">
-    <h3>Categories</h3>
-    <ul>
-        <li><a href="#">Latest Posts</a></li>
-        <li><a href="#">Popular Posts</a></li>
-        <li><a href="#">Travel</a></li>
-        <li><a href="#">Food</a></li>
-    </ul>
-</aside>
+    <aside>
+        <ul>
+            <li><a href="#">Latest Posts</a></li>
+            <li><a href="#">Popular Posts</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Authur</a></li>
+        </ul>
+    </aside>
 
-<main class="content">
-    <article class="post-box full-post">
-        <h1>5 Best Places to Visit in Italy</h1>
-        <img src="https://via.placeholder.com/800x400">
+    <div class="container">
 
-        <p>
-            Full article content goes here...
-        </p>
+    <div class="box">
+        <h3>Box 1</h3>
+        <p>This is the first box.</p>
+        <div class="box-buttons">
+            <button class="share-btn">Share</button>
+            <button class="read-btn">Read more</button>
+        </div>
+    </div>
 
-        <!-- Comments Section -->
-        <section class="comments">
-            <h3>Comments</h3>
-            <textarea placeholder="Write a comment..."></textarea>
-            <button>Post Comment</button>
-        </section>
+    <div class="box">
+        <h3>Box 2</h3>
+        <p>This is the second box.</p>
+        <div class="box-buttons">
+            <button class="share-btn">Share</button>
+            <button class="read-btn">Read more</button>
+        </div>
+    </div>
 
-        <!-- Author Info -->
-        <section class="author-box">
-            <img src="https://via.placeholder.com/80" alt="Author">
-            <div>
-                <h4>John Doe</h4>
-                <p>Travel writer and photographer.</p>
-            </div>
-        </section>
+    <div class="box">
+        <h3>Box 3</h3>
+        <p>This is the third box.</p>
+        <div class="box-buttons">
+            <button class="share-btn">Share</button>
+            <button class="read-btn">Read more</button>
+        </div>
+    </div>
 
-    </article>
-</main>
+    <div class="box">
+        <h3>Box 4</h3>
+        <p>This is the fourth box.</p>
+        <div class="box-buttons">
+            <button class="share-btn">Share</button>
+            <button class="read-btn">Read more</button>
+        </div>
+    </div>
 
-<footer>
-    <p>© 2025 My Blog. All rights reserved.</p>
-</footer>
-
-<script>
-function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('open');
-}
-</script>
-
+</div>
 </body>
 </html>

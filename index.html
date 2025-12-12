@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OBES BLOG</title>
+
+    <!-- Link external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- TOP NAVBAR -->
-    <header class="navbar">
+    <header>
         <div class="logo">OBES BLOG</div>
-        <input type="text" placeholder="Search..." class="search-bar">
-        <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar" id="sidebar">
-        <h3>Categories</h3>
+    <aside>
         <ul>
-            <li><a href="#">Latest Posts</a></li>
+            <li><a href="post.html">Latest Posts</a></li>
             <li><a href="#">Popular Posts</a></li>
             <li><a href="#">Travel</a></li>
             <li><a href="#">Food</a></li>
             <li><a href="#">Lifestyle</a></li>
+            <li><a href="#">Authur</a></li>
         </ul>
     </aside>
 
-    <!-- MAIN CONTENT -->
     <main class="content">
-
-        <!-- BLOG POST BOX -->
-        <article class="post-box">
-    <h2>Welcome to OBES BLOG</h2><br>
-    <p>
-        Here, every story, idea, and experience is a step toward discovering who we are 
-        and who we are becoming. OBES Blog is a place for dreamers, explorers, thinkers, 
-        and anyone walking their own unique path. Whether you're searching for inspiration, learning something new, or simply exploring 
-        the beauty of life’s journey — you’re right where you’re meant to be.
-    </p>
-
-    <h3 style="margin-top: 20px; text-align:center; font-weight:600;">
-        Your destiny starts here. <button>I am ready</button>
-    </h3>
-</article>
-
+        <p>
+            Welcome to <strong>OBES BLOG</strong> — a space where ideas come to life and insights are shared.
+            Whether you're looking for fresh perspectives, practical tips, or thought-provoking discussions,
+            you're in the right place. Dive in, explore our posts, and discover content designed to inform, inspire, and spark new ideas.
+            Have thoughts to share? Join the conversation and be part of our growing community.
+            <a href="post.html">Start exploring now</a>.
+        </p>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>© 2025 My Blog. All rights reserved.</p>
+        © 2025 OBES BLOG — All rights reserved.
     </footer>
-
-<script>
-function toggleShare(event) {
-    const popup = event.target.nextElementSibling;
-    popup.classList.toggle('show');
-}
-
-function toggleSidebar() {
-    document.getElementById('sidebar').classList.toggle('open');
-}
-</script>
 
 </body>
 </html>
