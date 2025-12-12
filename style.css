@@ -1,3 +1,13 @@
+/* --- COLOR THEME (YOU FORGOT THIS PART!) --- */
+:root {
+    --primary: #2563eb;
+    --primary-light: #3b82f6;
+    --dark: #1f2937;
+    --light: #f3f4f6;
+    --white: #ffffff;
+}
+
+/* --- BASE --- */
 body {
     display: flex;
     flex-direction: column;
@@ -62,16 +72,15 @@ aside {
     box-shadow: 2px 0 6px rgba(0,0,0,0.1);
 }
 
-ul  {
+aside ul {
     list-style: none;
-    color: blue;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 20px;
 }
 
-ul a {
+aside ul a {
     color: blue;
 }
 
@@ -83,78 +92,28 @@ ul a {
     max-width: 900px;
 }
 
-.content a{
+.content a {
     color: blue;
 }
 
-/* --- FOOTER --- */
-footer {
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-}
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 900px) {
-    aside {
-        position: relative;
-        width: 100%;
-        height: auto;
-        top: 0;
-        padding: 10px 0;
-        display: flex;
-        justify-content: center;
-        box-shadow: none;
-    }
-
-    aside ul {
-        display: flex;
-        gap: 20px;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .search-bar {
-        width: 100%;
-    }
-
-    aside ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-/* --- CONTAINER FOR BOXES --- */
+/* --- BOX CONTAINER --- */
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* space between boxes */
-    margin-left: 170px; 
+    margin-left: 170px;
     margin-top: 20px;
-    max-width: calc(100% - 170px);
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* --- BOX STYLING --- */
+/* --- BOX --- */
 .box {
     background: var(--white);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: left;
-    position: relative; /* Needed for button positioning */
 }
 
-/* Button container */
 .box-buttons {
     display: flex;
     gap: 10px;
@@ -162,7 +121,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Buttons */
 .box-buttons button {
     padding: 8px 12px;
     border: none;
@@ -170,18 +128,23 @@ footer {
     cursor: pointer;
     background: blue;
     color: white;
-    font-size: 0.9rem;
 }
 
-/* Hover effect */
 .box-buttons button:hover {
     background: black;
 }
-/* --- RESPONSIVE: STACK BOXES ON SMALL SCREENS --- */
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 700px) {
     .container {
         grid-template-columns: 1fr;
         margin-left: 0;
-        max-width: 100%;
     }
 }
