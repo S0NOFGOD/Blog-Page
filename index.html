@@ -8,57 +8,63 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>My Tech Blog</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Articles</a>
-      <a href="#">About</a>
-    </nav>
+  <!-- BLOG HEADER -->
+  <header class="blog-header">
+    <h1>My Blog</h1>
+    <p>Thoughts, tutorials, and stories</p>
   </header>
 
+  <!-- SEARCH BAR -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search posts...">
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="categories">
+    <button class="category-btn">All</button>
+    <button class="category-btn">Tech</button>
+    <button class="category-btn">Lifestyle</button>
+    <button class="category-btn">Learning</button>
+  </div>
+
   <!-- BLOG POSTS -->
-  <main class="blog-container">
+  <main class="posts">
 
     <article class="post">
-      <img src="https://via.placeholder.com/400x200" alt="Post image">
-      <div class="post-content">
-        <h2>Getting Started with HTML</h2>
-        <p class="date">August 2025</p>
-        <p>
-          HTML is the foundation of the web. In this article, we explore how it works and why it matters.
-        </p>
-        <button>Read More</button>
-      </div>
+      <h2>How I Started Learning Web Development</h2>
+      <p class="summary">
+        My journey into web development and the mistakes I made as a beginner.
+      </p>
+      <span class="tag">Learning</span>
+      <a href="#" class="read-more">Read More</a>
     </article>
 
     <article class="post">
-      <img src="https://via.placeholder.com/400x200" alt="Post image">
-      <div class="post-content">
-        <h2>CSS Tips for Modern Layouts</h2>
-        <p class="date">August 2025</p>
-        <p>
-          Learn how Flexbox and Grid help you build clean and responsive designs.
-        </p>
-        <button>Read More</button>
-      </div>
+      <h2>Understanding HTML, CSS & JavaScript</h2>
+      <p class="summary">
+        A simple explanation of frontend basics for beginners.
+      </p>
+      <span class="tag">Tech</span>
+      <a href="#" class="read-more">Read More</a>
     </article>
 
     <article class="post">
-      <img src="https://via.placeholder.com/400x200" alt="Post image">
-      <div class="post-content">
-        <h2>JavaScript Basics Explained</h2>
-        <p class="date">August 2025</p>
-        <p>
-          JavaScript adds logic and interactivity to your web pages. Here’s how to start.
-        </p>
-        <button>Read More</button>
-      </div>
+      <h2>Staying Consistent While Learning</h2>
+      <p class="summary">
+        How to stay motivated and disciplined while learning new skills.
+      </p>
+      <span class="tag">Lifestyle</span>
+      <a href="#" class="read-more">Read More</a>
     </article>
 
   </main>
 
+  <!-- COMMENTS (OPTIONAL) -->
+  <section class="comments">
+    <h3>Leave a Comment</h3>
+    <textarea placeholder="Write your comment..."></textarea>
+    <button>Post Comment</button>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>

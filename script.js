@@ -1,7 +1,11 @@
-const buttons = document.querySelectorAll(".post-content button");
+const searchInput = document.getElementById("searchInput");
+const posts = document.querySelectorAll(".post");
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    alert("Full article coming soon 📖");
+searchInput.addEventListener("keyup", function () {
+  const value = searchInput.value.toLowerCase();
+
+  posts.forEach(post => {
+    const title = post.querySelector("h2").innerText.toLowerCase();
+    post.style.display = title.includes(value) ? "block" : "none";
   });
 });
